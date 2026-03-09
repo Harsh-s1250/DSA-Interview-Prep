@@ -1,18 +1,13 @@
 import java.util.Scanner;
 
-class SecondLargest {
-    int findSecondLargest(int arr[]) {
+class MaxElement {
+    int findMaxElement(int arr[]) {
         int max = -1;
-        int secMax = -1;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > max) {
-                secMax = max;
+            if (arr[i] > max)
                 max = arr[i];
-            } else if (arr[i] > secMax && arr[i] != max) {
-                secMax = arr[i];
-            }
         }
-        return secMax;
+        return max;
     }
 }
 
@@ -26,7 +21,8 @@ class Main {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        int res = new SecondLargest().findSecondLargest(arr);
-        System.out.println("Second largest element is: " + res);
+        int res = new MaxElement().findMaxElement(arr);
+        System.out.println("Maximum element is: " + res);
+        sc.close();
     }
 }

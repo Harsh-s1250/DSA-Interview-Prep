@@ -1,18 +1,18 @@
 import java.util.Scanner;
 
-class MaxElement {
-    int findMaxElement(int arr[]) {
-        int max = -1;
+class MinElement {
+    int findMinElement(int arr[]) {
+        int min = arr[0];
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > max)
-                max = arr[i];
+            if (arr[i] < min)
+                min = arr[i];
         }
-        return max;
+        return min;
     }
 }
 
-class Main {
-    public static void main(String args[]) {
+class Main{
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the size of array: ");
         int n = sc.nextInt();
@@ -21,7 +21,8 @@ class Main {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        int res = new MaxElement().findMaxElement(arr);
-        System.out.println("Maximum element is: " + res);
+        int res = new MinElement().findMinElement(arr);
+        System.out.println("Minimum element is: " + res);
+        sc.close();
     }
 }
