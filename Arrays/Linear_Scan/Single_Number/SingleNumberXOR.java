@@ -3,7 +3,7 @@ import java.util.*;
 public class SingleNumberXOR {
 
     public static void main(String[] args) {
-        int[] nums = {4, 1, 2, 1, 2};
+        int[] nums = { 4, 1, 2, 1, 2 };
         System.out.println(singleNumber(nums));
     }
 
