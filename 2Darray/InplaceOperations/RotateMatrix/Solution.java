@@ -2,6 +2,7 @@ import java.util.*;
 class Solution {
     public void rotateClockwise(int[][] matrix) {
         int n = matrix.length;
+        // Transpose the matrix
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
                 int temp = matrix[i][j];
@@ -9,6 +10,7 @@ class Solution {
                 matrix[j][i] = temp;
             }
         }
+        //Reverse the rows
         for (int i = 0; i < n; i++) {
             int left = 0, right = n - 1;
             while (left < right) {
